@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* Include Tailwind CSS */
 @import "tailwindcss";
 
+/* Base styles */
 html, body, #root {
   height: 100%;
   margin: 0;
@@ -9,16 +11,10 @@ html, body, #root {
   font-family: 'Poppins', sans-serif;
 }
 
-@layer base {
-  html {
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  /* Ensure dark mode is applied to both HTML and body */
-  html.dark,
-  html.dark body {
-    color-scheme: dark;
-  }
+/* Dark mode support */
+html.dark,
+html.dark body {
+  color-scheme: dark;
 }
 
 /* Custom utilities */
