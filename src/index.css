@@ -1,25 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @import "tailwindcss";
 
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
 @layer base {
-  body {
+  html {
     font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
+  }
+  
+  /* Ensure dark mode is applied to both HTML and body */
+  html.dark,
+  html.dark body {
+    color-scheme: dark;
   }
 }
 
-@layer utilities {
-  .text-shadow {
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-  }
+/* Custom utilities */
+.text-shadow {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
 
-  .animate-float {
-    animation: float 3s infinite ease-in-out;
-  }
+.animate-float {
+  animation: float 3s infinite ease-in-out;
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
+
